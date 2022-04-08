@@ -25,6 +25,7 @@
 	
 	<!-- 태그이름: component-scan, alias: context -->
 	<!-- xmlns:context="http://www.springframework.org/schema/context"에 속해있다. -->
+	<!--  -->
 	<context:component-scan base-package="com.mycompany.webapp" use-default-filters="false">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
