@@ -10,6 +10,8 @@
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
+	<!-- spring에서 @를 붙여서 사용할 class를 정의해 주겠다. -->
+	<!-- @RequestParam,@GetMapping, @PostMapping, @ModelAttribute 자동인식 -->
 	<annotation-driven />
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
@@ -21,7 +23,14 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.mycompany.webapp" />
+	<!-- 태그이름: component-scan, alias: context -->
+	<!-- xmlns:context="http://www.springframework.org/schema/context"에 속해있다. -->
+	<context:component-scan base-package="com.mycompany.webapp" use-default-filters="false">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
+	</context:component-scan>
+	
+	
 	
 	
 	
