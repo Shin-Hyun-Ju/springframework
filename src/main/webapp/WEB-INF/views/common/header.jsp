@@ -16,7 +16,8 @@
 		<div class="d-flex flex-column vh-100"> <!-- viewport + height -->
 			<nav class="navbar navbar-dark bg-dark font-weight-bold"> <!-- 디폴트로 justify-content-between(양끝정렬) 되어있음 -->
 				<a class="navbar-brand" href="#">
-    				<img src="/webapp/resources/images/logo-spring.png" width="30" height="30"> Spring
+    				<img src="${pageContext.request.contextPath}/resources/images/logo-spring.png" width="30" height="30"> Spring
+    				<%-- <img src="<%=request.getContextPath()%>/resources/images/logo-spring.png" width="30" height="30">Spring		 --%>	
   				</a>
 				<div>
 					<a href="#" class="btn btn-success btn-sm">로그인</a>
