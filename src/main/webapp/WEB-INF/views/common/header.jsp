@@ -8,7 +8,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <title>Document</title>
 	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-	    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" ></script> <!-- ë¨¼ì  ìì± ëì´ì¼ íë¤. ììì ìëë¡ ì¤íëê¸° ëë¬¸ì jqueryê° ë¨¼ì  ë¡ë©ëì´ ìì´ì¼ íë¤. -->
+	    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script> <!-- slim들어가 있으면 ajax 포함 x -->
 	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" ></script>
 	    <link rel="stylesheet" href="/webapp/resources/css/app.css"/>
 	</head>
