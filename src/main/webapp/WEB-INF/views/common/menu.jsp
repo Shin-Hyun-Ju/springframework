@@ -26,9 +26,19 @@
 				href="${pageContext.request.contextPath}/ch05/content"
 				class="text-white">Controller/Header & cookie</a>
 		</h6></li>
-			<li class="nav-item mt-2"><h6 class="text-white">
+	<li class="nav-item mt-2"><h6 class="text-white">
 			<span class="mr-2">Ch06. </span><a
 				href="${pageContext.request.contextPath}/ch06/content"
 				class="text-white">Controller/Forward & Redirect </a>
+		</h6></li>
+			<li class="nav-item mt-2"><h6 class="text-white">
+			<span class="mr-2">Ch07. </span><a
+				href="${pageContext.request.contextPath}/ch07/content"
+				class="text-white">Data Delivery </a>
+		</h6></li>
+		<li class="nav-item mt-2"><h6 class="text-white">
+			<span class="mr-2">Ch08. </span><a
+				href="${pageContext.request.contextPath}/ch08/content"
+				class="text-white">Controller/Session Support</a>
 		</h6></li>
 </ul>

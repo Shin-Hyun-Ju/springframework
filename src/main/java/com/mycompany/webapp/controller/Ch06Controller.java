@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -55,5 +56,20 @@ public class Ch06Controller {
 		
 		
 		//return "ch06/fragmentHtml";	//jsp가 실행한 응답을 보낸다는 뜻. 이미 보냈기 때문에 생략 가능
+	}
+	
+	//produces를 통해 헤더에 명시해 주어야 하는 type을 작성해 준다.
+	@GetMapping(value="/getJson2", produces = "application/json; charset=UTF-8;")
+	@ResponseBody //리턴되는 내용이 응답 본문에 들어간다.
+	public String getJson2() throws Exception{
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("fileName", "photo3.jpg");
+		String json = jsonObject.toString();
+		return json; //응답 http에 들어가는 실제 내용
+	}
+	
+	@GetMapping("/getJson3")
+	public String getJson3() {
+		return "redirect:/";
 	}
 }
