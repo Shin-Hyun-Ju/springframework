@@ -25,7 +25,7 @@
 		<hr>
 		<%-- 찾는 순서: request 범위에서 먼저 찾고 session범위 -> application 범위 순으로 찾음. --%>
 		<p>
-			request 범위 객체 값: ${requestScopeValue}
+			request 범위 객체 값: ${requestScopeValue}<br>
 			member's name: ${member.name} <br> <%-- member.getName() 의 뜻! --%>
 			member's job: ${member.job}<br>
 			member's age: ${member.age}<br>

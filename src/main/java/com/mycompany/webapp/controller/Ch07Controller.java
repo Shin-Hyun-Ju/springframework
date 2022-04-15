@@ -96,12 +96,7 @@ public class Ch07Controller {
 		return "ch07/content";
 	}
 	
-	@GetMapping("/useJstl1")
-	public String useJstl1(HttpServletRequest request) {
-		String[] languages = {"Java", "JavaScript", "SpringFramework", "Vue"};
-		request.setAttribute("langs", languages); //배열을 request범위에 저장
-		return "ch07/useJstl1";
-	}
+
 	
 	@GetMapping("/useJstl2")
 	public String useJstl2(HttpServletRequest request) {
@@ -146,7 +141,16 @@ public class Ch07Controller {
 	@GetMapping("/commandOject") //argument 매개변수
 	public String commandObject(@ModelAttribute("cloth") Ch07Cloth cloth) {	//개별로 받은 것들은 return값으로 전달되지 않는데 dto, 즉 command로 받게 되면 자동으로 전달된다.
 		//클래스의 첫자를 소문자로 한 이름으로 request 범위에 저장된다.
-		
 		return "ch07/clothInfo";
 	}
+	
+	//요청 매핑 메소드가 실행될 때마다 먼저 실행
+	@ModelAttribute("commonData") //commonData라는 이름으로 request범위에 저장
+	public Ch07Board getCommonData() {
+		log.info("실행"); //이 페이지에서는 어떤 요청이 들어와도 얘는 항상 먼저 실행
+		Ch07Board board = new Ch07Board(2, "제목2", "내용2", "글쓴이1", new Date());
+		return board;
+	}
+	
+	
 }

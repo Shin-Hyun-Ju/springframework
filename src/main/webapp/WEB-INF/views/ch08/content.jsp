@@ -89,21 +89,21 @@
 						let mpassword = $("#mpassword").val();
 						$.ajax({
 							url: "loginAjax",
-							data: {mid, mpassword},
+							data: {mid, mpassword}, //{mid:mid, mpassword:mpassword}, key값과 value값이 같으면 생략 가넝한~
 							method: "post"
 						}).done((data) => {
 							//data = {result:"success"}
 							//data = {result:"wrongMid"}
 							//data = {result:"wrongMpassword"}
 							
-							const midError = $("#mid-error");
-							const mpasswordError = $("#mpassword-error");
+							const midError = $("#mid-error");	//jquery 참조
+							const mpasswordError = $("#mpassword-error");	//jquery 참조
 							midError.html("");
 							mpasswordError.html("");
 							
 							if(data.result==="success") {
 								//현재 페이지 전체를 다시 서버에서 받아오도록 함
-								window.location.reload();
+								window.location.reload(); //현재 페이지를 새로고침 하는 효과
 							} else if(data.result==="wrongMid") {
 								midError.html("아이디가 잘못됨");
 							} else if(data.result==="wrongMpassword") {
