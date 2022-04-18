@@ -8,6 +8,7 @@
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" /> <!-- 접두사 -->
 		<property name="suffix" value=".jsp" /> <!-- 접미사 -->
+		<property name="order" value="1"></property>
 	</bean>
 	
 </beans>

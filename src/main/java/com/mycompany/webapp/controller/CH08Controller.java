@@ -80,6 +80,7 @@ public class CH08Controller {
 		return "redirect:/ch08/content";
 	}
 	
+	//0415
 	@GetMapping("/userinfo")
 	public String userInfo(HttpSession session, @SessionAttribute String sessionMid, @SessionAttribute("sessionMid") String mid) {
 		

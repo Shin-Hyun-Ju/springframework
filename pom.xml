@@ -158,6 +158,14 @@
 			<artifactId>json</artifactId>
 			<version>20220320</version>
 		</dependency>
+
+		<!-- commons-fileupload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.4</version>
+		</dependency>
+
 	</dependencies>
 
 
