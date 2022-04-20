@@ -5,7 +5,7 @@
 	
 	   <!-- 에러 및 국제화 메시지를 위한 ResourceBundleMessageSource 관리빈 등록  -->
    <bean id="messageSource"
-      class="org.springframework.context.support.ResourceBundleMessageSource">   
+      class="org.springframework.context.support.ResourceBundleMessageSource"> <!-- 본인이 작성하지 않은 클래스 -->
       <property name="basenames">
          <list>
          	<!-- properties를 사용하기위해 해줘야 하는 설정 -->

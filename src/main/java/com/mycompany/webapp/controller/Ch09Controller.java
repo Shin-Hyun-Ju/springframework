@@ -80,9 +80,7 @@ public class Ch09Controller {
 		jsonObject.put("result", "success");
 		jsonObject.put("saveFilename", saveFilename);
 		String json = jsonObject.toString();
-		
-		
-		
+
 		return json; 
 	}
 	
