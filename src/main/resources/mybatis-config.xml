@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 가장 위에 작성되어야 함. 파일 저장할 때, utf-8 한글은 3byte, 영어는 1byte로 저장 -->
+
+<!-- 마크업 language , root 테그 하나만 작성-->
+<!-- 문서 유형 선언 -->
+<!-- doctypye에 root가 뭔지 명시(configuration) -->
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- 루트 태그(앨리먼트) -->
+<configuration>
+
+	<environments default="development">
+		<!-- environments 테그의 속성: default="development  -->
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.OracleDriver" /> <!-- 값을 작성할 때에는 "" or ''로 감싸야 한다. -->
+				<property name="url" value="jdbc:oracle:thin:@kosa1.iptime.org:50115/orcl" />
+				<property name="username" value="java" />
+				<property name="password" value="kosa12345" />
+			</dataSource>
+		</environment>
+	</environments>
+
+	<!-- xml(sql) 위치 설정 -->
+	<mappers>
+		<mapper resource="config/mapper/user.xml" />
+		<mapper resource="config/mapper/board.xml" />
+		<mapper resource="config/mapper/account.xml" />
+	</mappers>
+
+</configuration>

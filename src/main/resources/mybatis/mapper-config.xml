@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 가장 위에 작성되어야 함. 파일 저장할 때, utf-8 한글은 3byte, 영어는 1byte로 저장 -->
+
+<!-- 마크업 language , root 테그 하나만 작성-->
+<!-- 문서 유형 선언 -->
+<!-- doctypye에 root가 뭔지 명시(configuration) -->
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- 루트 태그(앨리먼트) -->
+<configuration>
+	<typeAliases>
+      <typeAlias type="com.mycompany.webapp.dto.Ch14Member" alias="member"/>
+      <typeAlias type="com.mycompany.webapp.dto.Ch14Board" alias="board"/>
+      <typeAlias type="com.mycompany.webapp.dto.Pager" alias="pager"/>
+      <typeAlias type="com.mycompany.webapp.dto.Ch16Account" alias="account"/> 
+   </typeAliases>
+
+</configuration>

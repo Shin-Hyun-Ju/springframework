@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.extern.log4j.Log4j2;
 
-@Controller("ch13Controller") //같은 이름을 갖고있는 것 있으면 안됨. 얘가 없으면 객체로 만들어지지 않음.
+@Controller	 //같은 이름을 갖고있는 것 있으면 안됨. 얘가 없으면 객체로 만들어지지 않음.
 @RequestMapping("/ch13")
 @Log4j2
 public class Ch13Controller {
